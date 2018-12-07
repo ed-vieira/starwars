@@ -46,7 +46,11 @@ exports.getPlanet = function(req, res) {
   planet.findById(req.params.planeta_id, function(err, obj) {
     if (err)
       res.send(err);
-    res.json(obj);
+      var result = {
+        planeta : obj
+      };
+    res.json(result);
+
   });
 };
 
@@ -69,6 +73,6 @@ exports.deletePlanet = function(req, res) {
   }, function(err, obj) {
     if (err)
       res.send(err);
-    res.json({ message: 'Task successfully deleted' });
+    res.json({ message: 'Dados deletados com sucesso.' });
   });
 };
