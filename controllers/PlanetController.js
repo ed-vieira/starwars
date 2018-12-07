@@ -9,7 +9,10 @@ exports.listAllPlanets = function(req, res) {
   planet.find({}, function(err, obj) {
     if (err)
       res.send(err);
-    res.json(obj);
+      var result = {
+        planetas : obj
+      };
+    res.json(result);
   });
 };
 
@@ -19,7 +22,10 @@ exports.searchPlanets = function(req, res) {
   planet.find({nome : req.params.nome}, function(err, obj) {
     if (err)
       res.send(err);
-    res.json(obj);
+      var result = {
+        planeta : obj
+      };
+    res.json(result);
   });
 };
 
