@@ -5,7 +5,11 @@ module.exports = function(app) {
 
   var planetsCtrl = require('../controllers/PlanetController');
 
+  var swappiCtrl = require('../controllers/SwappiController');
+
+  
   // Routes
+  app.route('/api/swappi').get(swappiCtrl.listPlanets);
 
   app.route('/api').get(appCtrl.appIndex);
 

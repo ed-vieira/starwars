@@ -1,8 +1,8 @@
 'use strict';
 
 
-var mongoose = require('mongoose'),
-planet = mongoose.model('Planets');
+var mongoose = require('mongoose'), planet = mongoose.model('Planets');
+
 
 
 exports.listAllPlanets = function(req, res) {
@@ -20,8 +20,9 @@ exports.listAllPlanets = function(req, res) {
 
 exports.searchPlanets = function(req, res) {
   planet.find({nome : req.params.nome}, function(err, obj) {
-    if (err)
+    if (err){
       res.send(err);
+    }
       var result = {
         planeta : obj
       };
@@ -34,8 +35,9 @@ exports.searchPlanets = function(req, res) {
 exports.addPlanet = function(req, res) {
   var new_planet = new planet(req.body);
   new_planet.save(function(err, obj) {
-    if (err)
+    if (err){
       res.send(err);
+    }
     res.json(obj);
   });
 };
@@ -44,11 +46,15 @@ exports.addPlanet = function(req, res) {
 
 exports.getPlanet = function(req, res) {
   planet.findById(req.params.planeta_id, function(err, obj) {
-    if (err)
+    if (err){
        var message={ 
-         message: "Planeta não encontrado",
-         planeta_id: req.params.planeta_id
+          message: "Planeta não encontrado",
+          errorMessage: "Busca por id= "+req.params.planeta_id+" não retornou nenhum resultado.",
+          default:{
+            err
+          }
         };
+      }
       res.send(message);
       var result = {
         planeta : obj
@@ -62,8 +68,9 @@ exports.getPlanet = function(req, res) {
 
 exports.updatePlanet = function(req, res) {
   planet.findOneAndUpdate({_id: req.params.planeta_id}, req.body, {new: true}, function(err, obj) {
-    if (err)
+    if (err){
       res.send(err);
+    }
     res.json(obj);
   });
 };
@@ -72,11 +79,13 @@ exports.updatePlanet = function(req, res) {
 
 
 exports.deletePlanet = function(req, res) {
-  planet.remove({
-    _id: req.params.planeta_id
-  }, function(err, obj) {
-    if (err)
-      res.send(err);
+  planet.remove({_id: req.params.planeta_id}, function(err, obj) {
+      if (err){
+        res.send(err);
+      }
     res.json({ message: 'Dados deletados com sucesso.' });
   });
 };
+
+
+
