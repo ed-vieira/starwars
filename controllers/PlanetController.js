@@ -45,7 +45,11 @@ exports.addPlanet = function(req, res) {
 exports.getPlanet = function(req, res) {
   planet.findById(req.params.planeta_id, function(err, obj) {
     if (err)
-      res.send(err);
+       var message={ 
+         message: "Planeta não encontrado",
+         planeta_id: req.params.planeta_id
+        };
+      res.send(message);
       var result = {
         planeta : obj
       };
