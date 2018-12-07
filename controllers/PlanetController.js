@@ -14,6 +14,7 @@ exports.listAllPlanets = function(req, res) {
 };
 
 
+
 exports.searchPlanets = function(req, res) {
   planet.find({}, function(err, obj) {
     if (err)
@@ -46,7 +47,7 @@ exports.getPlanet = function(req, res) {
 
 
 exports.updatePlanet = function(req, res) {
-  planet.findOneAndUpdate({_id: req.params.planeta_id}, req.body, {new: true}, function(err, ) {obj
+  planet.findOneAndUpdate({_id: req.params.planeta_id}, req.body, {new: true}, function(err, obj) {
     if (err)
       res.send(err);
     res.json(obj);
