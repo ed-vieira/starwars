@@ -16,7 +16,7 @@ exports.listAllPlanets = function(req, res) {
 
 
 exports.searchPlanets = function(req, res) {
-  planet.find(req.body, function(err, obj) {
+  planet.find({nome : req.params.nome}, function(err, obj) {
     if (err)
       res.send(err);
     res.json(obj);

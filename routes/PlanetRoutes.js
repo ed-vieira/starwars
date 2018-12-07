@@ -9,6 +9,8 @@ module.exports = function(app) {
 
   app.route('/selecionar-planeta/:planeta_id').get(planetsCtrl.getPlanet);
 
+  app.route('/buscar-planeta/:nome').get(planetsCtrl.searchPlanets);
+
   app.route('/alterar-planeta/:planeta_id').put(planetsCtrl.updatePlanet);
 
   app.route('/apagar-planeta/:planeta_id').delete(planetsCtrl.deletePlanet);
