@@ -9,7 +9,11 @@ module.exports = function(app) {
 
   
   // Routes
-  app.route('/api/swappi').get(swappiCtrl.listPlanets);
+  app.route('/api/swappi/planets').get(swappiCtrl.getPlanets);
+
+  app.route('/api/swappi/planets/:id').get(swappiCtrl.selectPlanet);
+
+  app.route('/api/swappi/films').get(swappiCtrl.getFilms);
 
   app.route('/api').get(appCtrl.appIndex);
 
@@ -24,5 +28,8 @@ module.exports = function(app) {
   app.route('/api/alterar-planeta/:planeta_id').put(planetsCtrl.updatePlanet);
 
   app.route('/api/apagar-planeta/:planeta_id').delete(planetsCtrl.deletePlanet);
+
+
+
 };
 
