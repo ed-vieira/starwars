@@ -15,6 +15,8 @@ module.exports = function(app) {
 
   app.route('/api/swappi/films').get(swappiCtrl.getFilms);
 
+  app.route('/api/swappi/planet-films/:name').get(swappiCtrl.getPlanetFilms);
+
   app.route('/api').get(appCtrl.appIndex);
 
   app.route('/api/planetas').get(planetsCtrl.listAllPlanets);

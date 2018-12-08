@@ -36,11 +36,14 @@ exports.listPlanets= function(req, res){
 
 
 
-  exports.getPlanetsF= function(){
+  exports.getPlanetFilms= function(req, res){
 
-    Request.get("http://swapi.co/api/planets/", (err, response, body) => {
-
-       JSON.parse(body);
+    Request.get("https://swapi.co/api/planets/?search="+req.params.name, (err, response, body) => {
+      if(err) {
+        res.send(err);
+      }
+      
+      res.json(JSON.parse(body));
       
      });
   
