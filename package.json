@@ -1,0 +1,31 @@
+{
+  "name": "starwars",
+  "version": "1.0.0",
+  "description": "desafio b2w",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ed-vieira/starwars.git"
+  },
+  "keywords": [
+    "starwars",
+    "api"
+  ],
+  "author": "Ed Vieira",
+  "license": "CDDL-1.0",
+  "bugs": {
+    "url": "https://github.com/ed-vieira/starwars/issues"
+  },
+  "homepage": "https://github.com/ed-vieira/starwars-b2w#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongoose": "^5.3.15",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.7"
+  }
+}
