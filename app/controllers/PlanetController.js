@@ -8,12 +8,11 @@ var mongoose = require('mongoose'), planet = mongoose.model('Planets');
 
 exports.listAllPlanets = function(req, res) {
   planet.find({}, function(err, obj) {
-    if (err)
+    if (err){
       res.send(err);
-      var result = {
-        planetas : obj
-      };
-    res.json(result);
+    }
+
+    res.json({planetas : obj});
   });
 };
 
@@ -24,10 +23,8 @@ exports.searchPlanets = function(req, res) {
     if (err){
       res.send(err);
     }
-      var result = {
-        planeta : obj
-      };
-    res.json(result);
+     
+    res.json({planeta : obj });
   });
 };
 
@@ -62,12 +59,10 @@ exports.getPlanet = function(req, res) {
             err
           }
         };
+        res.send(message);
       }
-      res.send(message);
-      var result = {
-        planeta : obj
-      };
-    res.json(result);
+     
+    res.json({planeta : obj});
 
   });
 };
