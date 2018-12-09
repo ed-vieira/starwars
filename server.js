@@ -7,7 +7,7 @@ var express = require('express'),
   
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/starwars_db'); 
+mongoose.connect('mongodb://localhost:27017/starwars_db', { useNewUrlParser: true }); 
 
 //headers
 app.use(function (req, res, next) {
