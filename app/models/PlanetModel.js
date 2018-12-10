@@ -6,15 +6,15 @@ var Schema = mongoose.Schema;
 var stwSchema = new Schema({
   name: {
     type: String,
-    required: 'Nome do planeta'
+    required: true
   },
   climate: {
     type: String,
-    required: "Clima do planeta"
+    required: true
   },
   terrain: {
     type: String,
-    required: "Terreno do planeta"
+    required: true
   },
     
   });

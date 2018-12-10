@@ -25,7 +25,7 @@ module.exports = function(app) {
 
   app.route('/api/selecionar-planeta/:planeta_id').get(planetsCtrl.getPlanet);
 
-  app.route('/api/buscar-planeta/:nome').get(planetsCtrl.searchPlanets);
+  app.route('/api/buscar-planeta/:name').get(planetsCtrl.searchPlanets);
 
   app.route('/api/alterar-planeta/:planeta_id').put(planetsCtrl.updatePlanet);
 
