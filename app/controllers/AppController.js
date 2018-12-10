@@ -2,15 +2,15 @@
 
 
 exports.appIndex = function(req, res){
-
+   var server= "http://localhost:3000"
    var routes={
        urls : {
-        planetas : "http://localhos:3000/api/planetas",
-        novo : "http://localhos:3000/api/novo-planeta",
-        selecionar: "http://localhos:3000/api/selecionar-planeta/:planeta_id",
-        buscar: "http://localhos:3000/api/buscar-planeta/:nome",
-        alterar: "http://localhos:3000/api/alterar-planeta/:planeta_id",
-        apagar:  "http://localhos:3000/api/apagar-planeta/:planeta_id"
+        planetas : server+"/api/planetas",
+        novo : server+"/api/novo-planeta",
+        selecionar: server+"/api/selecionar-planeta/:planeta_id",
+        buscar: server+"/api/buscar-planeta/:nome",
+        alterar: server+"/api/alterar-planeta/:planeta_id",
+        apagar:  server+"/api/apagar-planeta/:planeta_id"
        }
     };
 

@@ -17,6 +17,8 @@ module.exports = function(app) {
 
   app.route('/api/swappi/planet-films/:name').get(swappiCtrl.getPlanetFilms);
 
+  app.route('/').get(appCtrl.appIndex);
+
   app.route('/api').get(appCtrl.appIndex);
 
   app.route('/api/planetas').get(planetsCtrl.listAllPlanets);
@@ -27,9 +29,9 @@ module.exports = function(app) {
 
   app.route('/api/buscar-planeta/:name').get(planetsCtrl.searchPlanets);
 
-  app.route('/api/alterar-planeta/:planeta_id').put(planetsCtrl.updatePlanet);
+  app.route('/api/alterar-planeta/:planeta_id').post(planetsCtrl.updatePlanet);
 
-  app.route('/api/apagar-planeta/:planeta_id').delete(planetsCtrl.deletePlanet);
+  app.route('/api/apagar-planeta/:planeta_id').get(planetsCtrl.deletePlanet);
 
 
 

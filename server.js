@@ -36,4 +36,4 @@ app.use(function(req, res) {
 
   app.listen(port);
 
-console.log('Star Wars RESTful API server started on: ' + port);
+console.log('Star Wars RESTful API server inicido em: ' + port);

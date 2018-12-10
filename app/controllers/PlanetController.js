@@ -65,11 +65,11 @@ exports.updatePlanet = function(req, res) {
 
 
 exports.deletePlanet = function(req, res) {
-  planet.remove({_id: req.params.planeta_id}, function(err, _planet) {
+  planet.deleteOne({_id: req.params.planeta_id}, function(err, _planet) {
       if(err){
         res.send(err);
       }else{
-        res.json({ message: 'Dados deletados com sucesso.' });
+        res.json({ message: 'Dados deletados com sucesso. ID ' + req.params.id });
       } 
   });
 };
