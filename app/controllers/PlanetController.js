@@ -69,7 +69,7 @@ exports.deletePlanet = function(req, res) {
       if(err){
         res.send(err);
       }else{
-        res.json({ message: 'Dados deletados com sucesso. ID ' + req.params.id });
+        res.json({ message: 'Dados deletados com sucesso. ID ' + req.params.planeta_id });
       } 
   });
 };
