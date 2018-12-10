@@ -6,6 +6,7 @@ exports.appIndex = function(req, res){
    var routes={
        urls : {
         planetas : server+"/api/planetas",
+        swappi : server+"/api/swappi/planets",
         novo : server+"/api/novo-planeta",
         selecionar: server+"/api/selecionar-planeta/:planeta_id",
         buscar: server+"/api/buscar-planeta/:nome",
