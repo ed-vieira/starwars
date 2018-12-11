@@ -2,7 +2,7 @@
 
 
 exports.appIndex = function(req, res){
-   var server= "http://localhost:3000"
+   var server= "http://localhost:3300"
    var routes={
        urls : {
         planetas : server+"/api/planetas",
