@@ -22,13 +22,9 @@ app.use(function (req, res, next) {
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+var routes = require('./app/routes/PlanetRoutes'); 
 
-var routes = require('./app/routes/PlanetRoutes'); //importing route
-
-
-
-routes(app); //register the route
-
+routes(app); 
 
 app.use(function(req, res) {
     res.status(404).send({url: 'URL: '+ req.originalUrl + ' não encontrada'})
