@@ -5,7 +5,6 @@ const swapi = require('swapi-node');
 var Request = require("request");
 
 
-
 exports.listPlanets= function(req, res){
 
     Request.get("http://swapi.co/api/planets/", (err, response, body) => {
@@ -34,8 +33,6 @@ exports.listPlanets= function(req, res){
   }
 
 
-
-
   exports.getPlanetFilms= function(req, res){
 
     Request.get("https://swapi.co/api/planets/?search="+req.params.name, (err, response, body) => {
@@ -48,10 +45,6 @@ exports.listPlanets= function(req, res){
      });
   
   }
-
-
-
-
 
 
   exports.getFilms= function(req, res){

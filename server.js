@@ -2,7 +2,7 @@ var express = require('express'),
   app = express(),
   port = process.env.PORT || 3000,
   mongoose = require('mongoose'),
-  Planets = require('./app/models/PlanetModel'), //loading model
+  Planets = require('./app/models/PlanetModel'), 
   bodyParser = require('body-parser');
   
 // mongoose instance connection url connection
@@ -36,4 +36,4 @@ app.use(function(req, res) {
 
   app.listen(port);
 
-console.log('Star Wars RESTful API server inicido em: ' + port);
+console.log('Star Wars API server iniciado em: ' + port);

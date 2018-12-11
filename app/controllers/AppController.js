@@ -7,11 +7,9 @@ exports.appIndex = function(req, res){
        urls : {
         planetas : server+"/api/planetas",
         swappi : server+"/api/swappi/planets",
-        novo : server+"/api/novo-planeta",
-        selecionar: server+"/api/selecionar-planeta/:planeta_id",
+        novo : server+"/api/novo-planeta",  
         buscar: server+"/api/buscar-planeta/:nome",
-        alterar: server+"/api/alterar-planeta/:planeta_id",
-        apagar:  server+"/api/apagar-planeta/:planeta_id"
+        planeta: server+"/api/planeta/:planeta_id",      
        }
     };
 

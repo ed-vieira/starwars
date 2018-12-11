@@ -25,15 +25,12 @@ module.exports = function(app) {
   
   app.route('/api/novo-planeta').post(planetsCtrl.addPlanet);
 
-  app.route('/api/selecionar-planeta/:planeta_id').get(planetsCtrl.getPlanet);
-
   app.route('/api/buscar-planeta/:name').get(planetsCtrl.searchPlanets);
 
-  app.route('/api/alterar-planeta/:planeta_id').post(planetsCtrl.updatePlanet);
-
-  app.route('/api/apagar-planeta/:planeta_id').get(planetsCtrl.deletePlanet);
-
-
+  app.route('/api/planeta/:planeta_id')
+   .get(planetsCtrl.getPlanet)
+    .put(planetsCtrl.updatePlanet)
+     .delete(planetsCtrl.deletePlanet);
 
 };
 
