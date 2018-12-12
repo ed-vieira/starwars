@@ -12,6 +12,7 @@ Inicie o servidor com o comando:
 
 "$ node server.js" 
 
-O projeto está configurado para o node usar a porta 3300
+O projeto está configurado para o node usar 
+a url http://localhost:3300
 e as conexões com o mongodb estão configuradas para utilizar
 a porta 27017.  
