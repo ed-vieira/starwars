@@ -9,7 +9,8 @@ e digite o comando:
 "$ npm install" para instalar os módulos necessários.
 
 Inicie o servidor com o comando:
-$ node server.js 
+
+"$ node server.js" 
 
 O projeto está configurado para o node usar a porta 3300
 e as conexões com o mongodb estão configuradas para utilizar
