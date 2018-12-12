@@ -22,7 +22,7 @@ module.exports = function(app) {
   //inicio do app listando as rotas
   app.route('/').get(appCtrl.appIndex);
 
-  //Rotas para Gerenciar os planetas criados no banco de dados local
+  //Rotas para Gerênciar os planetas criados no banco de dados local
   app.route('/api').get(appCtrl.appIndex);
   app.route('/api/planetas').get(planetsCtrl.listAllPlanets);
   app.route('/api/novo-planeta').post(planetsCtrl.addPlanet);
