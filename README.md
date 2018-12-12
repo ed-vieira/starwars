@@ -1,5 +1,5 @@
 # starwars
-API para o game star wars
+API para o game do Star Wars
 
 Necessário ter nodejs, mongodb e o npm instalados.
 
