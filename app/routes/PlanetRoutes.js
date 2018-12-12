@@ -10,7 +10,7 @@ module.exports = function(app) {
   
   // Routes
   //listar os dados da SWAPI
-  app.route('/api/swappi/planets').get(swappiCtrl.getPlanets);
+  app.route('/api/swappi/planets').get(swappiCtrl.listPlanets);
 
   app.route('/api/swappi/planets/:id').get(swappiCtrl.selectPlanet);
 
